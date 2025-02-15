@@ -1,4 +1,4 @@
-name: Test your code
+name: Test Tutorial 2 Greetings
 on: [push]
 
 jobs:
@@ -12,8 +12,11 @@ jobs:
         with:
           go-version: '1.21.x'
       - name: Install dependencies
+        working-directory: "greetings"
         run: go get .
       - name: Build
+        working-directory: "greetings"
         run: go build -v ./...
       - name: Test greetings
-        run: cd greetings; go test
+        working-directory: "greetings"
+        run: go test
