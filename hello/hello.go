@@ -12,8 +12,11 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	// get a greeting and return a message
-	message, err := greetings.Hello("Donny")
+	// make a slice of names - make sure clarence is last
+	names := []string{"Big lez", "Sassy", "Mike Nolan", "Donny", "Wayne", "Norton", "Quinton", "Clarence"}
+
+	// get the greetings for the slice of names
+	message, err := greetings.Hellos(names)
 
 	// handle the error if there was one
 	if err != nil {
