@@ -13,7 +13,8 @@ func main() {
 	log.SetFlags(0)
 
 	// make a slice of names - make sure clarence is last
-	names := []string{"Big lez", "Sassy", "Mike Nolan", "Donny", "Wayne", "Norton", "Quinton", "Clarence"}
+	// Clarence only makes an appearance in tests.
+	names := []string{"Big lez", "Sassy", "Mike Nolan", "Donny", "Wayne", "Norton", "Quinton"}
 
 	// get the greetings for the slice of names
 	message, err := greetings.Hellos(names)
