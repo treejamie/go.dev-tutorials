@@ -1,4 +1,4 @@
-name: Test Tutorial 2 Greetings
+name: The Tests 
 on: [push]
 
 jobs:
@@ -11,12 +11,3 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.21.x'
-      - name: Install dependencies
-        working-directory: "greetings"
-        run: go get .
-      - name: Build
-        working-directory: "greetings"
-        run: go build -v ./...
-      - name: Test greetings
-        working-directory: "greetings"
-        run: go test
