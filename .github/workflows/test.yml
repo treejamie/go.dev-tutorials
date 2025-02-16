@@ -1,4 +1,4 @@
-name: Test Tutorial 2 Greetings
+name: The Tests 
 on: [push]
 
 jobs:
