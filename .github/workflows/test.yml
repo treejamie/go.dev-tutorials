@@ -12,5 +12,5 @@ jobs:
         with:
           go-version: '1.21.x'
       - name: Build
-        working-directory: "workspce/hello"
+        working-directory: "workspace/hello"
         run: go build -v .
