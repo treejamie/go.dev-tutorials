@@ -12,9 +12,15 @@ func FuzzReverse(f *testing.F){
 	for _, tc := range testcases{
 		f.Add(tc)
 	}
-	f.Fuzz(func(t *testing.T, orig string){
-		rev :=  Reverse(orig)
-		doubleRev := Reverse(rev)
+	f.Fuzz(func(t *testing.T, orig string) {
+		rev, err1 := Reverse(orig)
+		if err1 != nil{
+			return
+		}
+		doubleRev, err2 := Reverse(rev)
+		if err2 != nil {
+			return
+		}
 		if orig != doubleRev {
 			t.Errorf("Before: %q, after: %q", orig, doubleRev)
 		}
