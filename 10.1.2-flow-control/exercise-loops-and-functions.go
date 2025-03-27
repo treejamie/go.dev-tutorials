@@ -16,7 +16,7 @@ import (
 	"math"
 )
 
-func Sqrt(x float64) (float64, error){
+func Sqrt(x float64) (float64, error) {
 
 	// base case, don't go negative
 	if x < 0 {
@@ -30,8 +30,8 @@ func Sqrt(x float64) (float64, error){
 
 	// take a guesss - any guess will do
 	guess := x / 2
-	for math.Abs(guess * guess - x) > 0.000001 { // that's a tolerance and can be adjusted
-		guess = (guess + x / guess ) / 2
+	for math.Abs(guess*guess-x) > 0.000001 { // that's a tolerance and can be adjusted
+		guess = (guess + x/guess) / 2
 	}
 
 	// and we're done
