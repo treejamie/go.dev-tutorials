@@ -32,7 +32,6 @@ func Sqrt(x float64) (float64, error){
 	guess := x / 2
 	for math.Abs(guess * guess - x) > 0.000001 { // that's a tolerance and can be adjusted
 		guess = (guess + x / guess ) / 2
-
 	}
 
 	// and we're done
