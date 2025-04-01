@@ -7,4 +7,7 @@ require (
 	golang.org/x/text v0.23.0
 )
 
-require filippo.io/edwards25519 v1.1.0 // indirect
+require (
+	filippo.io/edwards25519 v1.1.0 // indirect
+	golang.org/x/tour v0.1.0 // indirect
+)
